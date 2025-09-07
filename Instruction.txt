@@ -1,0 +1,93 @@
+
+## 3. main.py
+
+```python
+#!/usr/bin/env python3
+"""
+Main entry point for the AutoMed Healthcare Chatbot System.
+Initializes and runs the multi-agent healthcare chatbot.
+"""
+
+import os
+import logging
+from dotenv import load_dotenv
+from autogen import AssistantAgent, UserProxyAgent, GroupChat, GroupChatManager
+from config import configure_agents, agent_configs
+
+# Suppress warnings from autogen.oai.client
+logging.getLogger("autogen.oai.client").setLevel(logging.ERROR)
+
+# Load environment variables
+load_dotenv()
+
+class AutoMedHealthcareChatbot:
+    """Main class for the healthcare chatbot system."""
+    
+    def __init__(self):
+        """Initialize the chatbot with all agents."""
+        self.agents = configure_agents()
+        self.group_chat = None
+        self.manager = None
+        self.setup_group_chat()
+    
+    def setup_group_chat(self):
+        """Set up the group chat with all agents."""
+        # Create group chat
+        self.group_chat = GroupChat(
+            agents=list(self.agents.values()), 
+            messages=[], 
+            max_round=12,
+            speaker_selection_method="round_robin"
+        )
+        
+        # Create manager
+        self.manager = GroupChatManager(
+            groupchat=self.group_chat,
+            name="Manager",
+            llm_config=agent_configs["manager"]
+        )
+    
+    def start_chat(self, message):
+        """Start a chat session with the given message."""
+        # Initialize chat with the healthcare facilitator
+        self.agents["healthcare_facilitator"].initiate_chat(
+            self.manager,
+            message=message
+        )
+    
+    def run_interactive(self):
+        """Run an interactive chat session."""
+        print("=" * 60)
+        print("AutoMed Healthcare Chatbot - Interactive Mode")
+        print("Type 'exit' to end the conversation")
+        print("=" * 60)
+        
+        while True:
+            user_input = input("\nYou: ")
+            if user_input.lower() in ['exit', 'quit', 'bye']:
+                print("Thank you for using AutoMed. Stay healthy!")
+                break
+            
+            try:
+                self.start_chat(user_input)
+            except Exception as e:
+                print(f"An error occurred: {e}")
+                print("Please try again or check your configuration.")
+
+def main():
+    """Main function to run the healthcare chatbot."""
+    print("Initializing AutoMed Healthcare Chatbot...")
+    
+    try:
+        chatbot = AutoMedHealthcareChatbot()
+        print("Chatbot initialized successfully!")
+        
+        # Run in interactive mode
+        chatbot.run_interactive()
+        
+    except Exception as e:
+        print(f"Failed to initialize chatbot: {e}")
+        print("Please check your API keys and configuration.")
+
+if __name__ == "__main__":
+    main()
