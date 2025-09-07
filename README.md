@@ -1,6 +1,6 @@
-# Multi-Agent Healthcare Chatbot with AutoGen (AutoMed)
+# Multi-Agent Chatbot for Healthcare
 
-A sophisticated multi-agent healthcare chatbot system built using Microsoft's AutoGen framework, designed to provide preliminary healthcare guidance, mental health support, and medical information retrieval.
+A sophisticated multi-agent healthcare chatbot system built using Microsoft's AutoGen framework, this (AutoMed) is designed to provide preliminary healthcare guidance, mental health support, and medical information retrieval.
 
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
 ![AutoGen Version](https://img.shields.io/badge/autogen-0.2%2B-orange)
