@@ -1,10 +1,21 @@
 # Multi-Agent Chatbot for Healthcare
 
-A sophisticated multi-agent healthcare chatbot system built using Microsoft's AutoGen framework, this (AutoMed) is designed to provide preliminary healthcare guidance, mental health support, and medical information retrieval. AutoMed is not just an ordinary chatbot—it’s a multi-agent AI system powered by AG2 (AutoGen), designed to simulate expert medical consultation through intelligent collaboration. Instead of relying on a single AI agent, AutoMed orchestrates multiple specialized agents, each dedicated to a specific task, ensuring comprehensive, accurate, and real-time medical guidance. By leveraging AutoGen’s multi-agent capabilities, AutoMed mimics the behavior of a real medical team, where different AI agents collaborate to analyze symptoms, suggest treatments, fetch real-time medical data, and provide follow-up care.
+A sophisticated multi-agent healthcare chatbot system built using Microsoft's [AutoGen framework](https://www.microsoft.com/en-us/research/project/autogen/), this (**AutoMed**) is designed to provide preliminary healthcare guidance, mental health support, and medical information retrieval.  
 
-With its adaptive intelligence and multi-agent communication, AutoMed delivers human-like, context-aware conversations that go beyond basic symptom checkers. Unlike conventional AI chatbots that provide one-size-fits-all responses, AutoMed's specialized agents work together to deliver precise, tailored recommendations based on the user’s health history and real-time input. This results in a more interactive, intelligent, and reliable medical consultation experience.
+AutoMed is not just an ordinary chatbot — it’s a multi-agent AI system powered by AG2 (AutoGen), designed to simulate expert medical consultation through intelligent collaboration.  
 
-Disclaimer: This guided project is designed to introduce learners to AG2 (AutoGen). The medical advice provided should not be considered a substitute for professional medical consultation, diagnosis, or treatment. Always seek guidance from a qualified healthcare professional.
+---
+
+Instead of relying on a single AI agent, AutoMed orchestrates multiple specialized agents, each dedicated to a specific task, ensuring comprehensive, accurate, and real-time medical guidance. By leveraging AutoGen’s multi-agent capabilities, AutoMed mimics the behavior of a real medical team, where different AI agents collaborate to analyze symptoms, suggest treatments, fetch real-time medical data, and provide follow-up care.  
+
+---
+
+With its adaptive intelligence and multi-agent communication, AutoMed delivers human-like, context-aware conversations that go beyond basic symptom checkers. Unlike conventional AI chatbots that provide one-size-fits-all responses, AutoMed's specialized agents work together to deliver precise, tailored recommendations based on the user’s health history and real-time input. This results in a more interactive, intelligent, and reliable medical consultation experience.  
+
+---
+
+**_Disclaimer:_**  
+This guided project is designed to introduce learners to AG2 (AutoGen). The medical advice provided should not be considered a substitute for professional medical consultation, diagnosis, or treatment. Always seek guidance from a qualified healthcare professional.
 
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
 ![AutoGen Version](https://img.shields.io/badge/autogen-0.2%2B-orange)
