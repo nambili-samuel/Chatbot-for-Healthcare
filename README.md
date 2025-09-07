@@ -6,8 +6,6 @@ Instead of relying on a single AI agent, AutoMed orchestrates multiple specializ
 
 With its adaptive intelligence and multi-agent communication, AutoMed delivers human-like, context-aware conversations that go beyond basic symptom checkers. Unlike conventional AI chatbots that provide one-size-fits-all responses, AutoMed's specialized agents work together to deliver precise, tailored recommendations based on the user’s health history and real-time input. This results in a more interactive, intelligent, and reliable medical consultation experience.  
 
--
-
 **_Disclaimer:_**  
 This guided project is designed to introduce learners to AG2 (AutoGen). The medical advice provided should not be considered a substitute for professional medical consultation, diagnosis, or treatment. Always seek guidance from a qualified healthcare professional.
 
